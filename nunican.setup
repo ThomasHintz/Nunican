@@ -1,0 +1,15 @@
+; author: Thomas Hintz
+; email: t@thintz.com
+; license: bsd
+
+(compile -s -O2 -d1 nunican.scm -j nunican)
+(compile -s nunican.import.scm -O2 -d0)
+(compile -c -O2 -d1 nunican.scm -unit nunican -j nunican)
+
+(install-extension
+  'nunican
+  ; Files to install for your extension:
+  '("nunican.o" "nunican.so" "nunican.import.so")
+  ; Assoc list with properties for your extension:
+  '((version 0.1)
+    (static "nunican.o"))) ;; for static linking

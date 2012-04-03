@@ -1,0 +1,13 @@
+; author: Thomas Hintz
+; email: t@thintz.com
+; license: bsd
+
+(
+(license "BSD")
+
+(category web)
+
+(needs srfi-1 spiffy intarweb srfi-69 uri-common)
+
+(author "Thomas Hintz")
+(synopsis "Generates CSS pages based on utility functions, allowing one to easily use Scheme to create CSS."))
